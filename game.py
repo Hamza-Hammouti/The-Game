@@ -5,28 +5,28 @@ print("Bakker: Hallo! Wat mag het zijn?")
 print("1) Een broodje kip")
 print("2) Een frikandelbroodje")
 
-optie1 = input("Keuze: ")
+broodjeOptie = input("Keuze: ")
 
 print("")
 
-if optie1 == "1":
+if broodjeOptie == "1":
     print("Een broodje kip zal dan €3,50 zijn.")
-elif optie1 == "2":
+elif broodjeOptie == "2":
     print("Een frikandelbroodje zal je dan €2,50 kosten.")
 
 print("Wil je pinnen of contant betalen?")
 print("1) Pinnen")
 print("2) Contant betalen")
 
-optie2 = input("Keuze: ")
+betaalOptie = input("Keuze: ")
 
 print("")
 
-if optie2 == "1":
+if betaalOptie == "1":
     print("Je steekt je pinpas in het pinautomaat en je voert jouw pincode in. Je hoort een foutmelding op het apparaat.")
     print("Bakker: Je saldo is te laag..")
     print("Je verontschuldigt je en loopt de bakkerij uit vol met schaamte.")
-elif optie2 == "2":
+elif betaalOptie == "2":
     print("Je graait in je zak en je voelt niets. Je checkt je andere zakken maar het blijkt dat je geen geld meer hebt.")
     print("Je verontschuldigt je en loopt de bakkerij uit vol met schaamte.")
 
@@ -38,21 +38,21 @@ print("Je denkt stevig na en er schiet je opeens wat te binnen, een overval..")
 
 print ("")
 
-optie3 = input("Wil je dit zeker weten doen? (ja of nee): ").lower()
+confirmOptie = input("Wil je dit zeker weten doen? (ja of nee): ").lower()
 
 print("")
 
-if optie3 == "ja":
+if confirmOptie == "ja":
     print("Je komt thuis en je gaat nadenken over jouw doelwit.")
     print("Je hebt 2 keuzes:")
     print("1) Een winkel")
     print("2) Een bank")
-    optie4 = input("Keuze: ")
+    targetOptie = input("Keuze: ")
     print("")
     
-    if optie4 == "1":
+    if targetOptie == "1":
         print("Je kiest voor een winkel omdat dit simpeler lijkt dan een bank.")
-    elif optie4 == "2":
+    elif targetOptie == "2":
         print("Je kiest voor een bank omdat de beloning groter lijkt.")
 
     print("")
@@ -60,18 +60,18 @@ if optie3 == "ja":
     print("1) Een pistool")
     print("2) Een AK-47 rifle")
     print("3) Een AR-15 rifle")
-    optie5 = input("Keuze: ")
+    wapenOptie = input("Keuze: ")
 
     print("")
 
-    if optie5 == "1":
+    if wapenOptie == "1":
         print("Je kiest voor een pistool")
         
-    elif optie5 == "2" or optie5 == "3":
+    elif wapenOptie == "2" or wapenOptie == "3":
         print("Je kiest voor een rifle")
 
 
-elif optie3 == "nee":
+elif confirmOptie == "nee":
     print("Je doet verder niets en je wordt je huis uit gestuurd.")
     print("Je komt op straat en je zinkt steeds dieper door.")
     print("Je komt te overlijden op straat tussen de armoede..")
