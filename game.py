@@ -93,7 +93,7 @@ if not confirmOptie == "nee":
     elif wapenOptie == 2 or wapenOptie == 3:
         print("Je kiest voor een rifle")
 
-    if targetOptie == "1":
+    elif targetOptie == "1":
         print("Je loopt naar de Gucci winkel met een gespannen gevoel..")
         print("Je komt steeds dichterbij en je staat op veilige kijkafstand van de winkel.")
         print("")
@@ -109,7 +109,7 @@ if not confirmOptie == "nee":
         print("")
         maskerOptie = input("Keuze: ").lower()
 
-    if wapenOptie <= 1 and maskerOptie == "ja":
+    elif wapenOptie <= 1 and maskerOptie == "ja":
         print("Je zet je masker op en je haalt je pistool tevoorschijn.")
     
     elif wapenOptie >= 2 and maskerOptie == "ja":
@@ -123,7 +123,7 @@ if not confirmOptie == "nee":
         print("Je zet je masker niet op want je denkt dat dit niet nodig is.")
         print("Je haalt je rifle tevoorschijn.")
     
-    if targetOptie == "1" and wapenOptie == 1 and maskerOptie == "ja":
+    elif targetOptie == "1" and wapenOptie == 1 and maskerOptie == "ja":
         print("Je rent de winkel in en je richt je pistool.")   
         print("Je zet de camera's niet uit aangezien je een masker op hebt.")
 
@@ -132,7 +132,7 @@ if not confirmOptie == "nee":
         print("Je vertelt de medewerker om niets geks te proberen.")
         print("Je zet de camera's niet uit aangezien je een masker op hebt.")
 
-    if targetOptie == "2" and wapenOptie == 1 and maskerOptie == "ja":
+    elif targetOptie == "2" and wapenOptie == 1 and maskerOptie == "ja":
         print("Je rent de bank in en je richt je pistool op de bankmedewerker")
         print("Hij zit achter kogelvrij glas")
         print("Je vertelt de bankmedewerker om de deur open te doen")
@@ -208,9 +208,16 @@ if not confirmOptie == "nee":
         print("")
         print("GAME OVER")
     
+    else:
+        print("Je hebt iets verkeerds ingevoerd.")
+    
+    
 elif confirmOptie == "nee":
     print("Je doet verder niets en je wordt je huis uit gestuurd.")
     print("Je komt op straat en je zinkt steeds dieper door.")
     print("Je komt te overlijden op straat tussen de armoede..")
     print("")
     print("GAME OVER")
+
+else:
+    print("Je hebt iets verkeerds ingevoerd.")
