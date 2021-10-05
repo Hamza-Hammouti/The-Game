@@ -1,3 +1,5 @@
+print("Level 1: Eigenschappen")
+
 print("We beginnen met je eigenschappen.")
 print("")
 naamChar = input ("Wat is je voornaam en je achternaam?: ")
@@ -9,8 +11,14 @@ lengteChar = int(input(""))
 
 print("")
 
+print("En als laatste nog je leeftijd.")
+print("")
+print("Je leeftijd:")
+leeftijdChar = int(input(""))
+
 print("Je naam is " + naamChar)
 print("Je bent " + str(lengteChar) + " in cm")
+print("Je bent " + str(leeftijdChar) + " jaar oud")
 
 print("")
 
@@ -18,6 +26,10 @@ if lengteChar < 170:
     print("Je bent best kort, misschien komt dit wel van pas..")
 elif lengteChar > 169:
     print("Je bent best lang, misschien komt dit wel van pas..")
+
+print("")
+
+print("Level 2: De eerste dag")
 
 print("")
 
@@ -65,6 +77,10 @@ confirmOptie = input("Wil je dit zeker weten doen? (ja of nee): ").lower()
 
 print("")
 
+print("Level 3: Setup")
+
+print("")
+
 if not confirmOptie == "nee":
     print("Je komt thuis en je gaat nadenken over jouw doelwit.")
     print("Je hebt 2 keuzes:")
@@ -93,7 +109,13 @@ if not confirmOptie == "nee":
     elif wapenOptie == 2 or wapenOptie == 3:
         print("Je kiest voor een rifle")
 
-    elif targetOptie == "1":
+    print()
+
+    print("Level 4: De grote dag") 
+
+    print()
+
+    if targetOptie == "1":
         print("Je loopt naar de Gucci winkel met een gespannen gevoel..")
         print("Je komt steeds dichterbij en je staat op veilige kijkafstand van de winkel.")
         print("")
@@ -109,7 +131,7 @@ if not confirmOptie == "nee":
         print("")
         maskerOptie = input("Keuze: ").lower()
 
-    elif wapenOptie <= 1 and maskerOptie == "ja":
+    if wapenOptie <= 1 and maskerOptie == "ja":
         print("Je zet je masker op en je haalt je pistool tevoorschijn.")
     
     elif wapenOptie >= 2 and maskerOptie == "ja":
@@ -210,7 +232,6 @@ if not confirmOptie == "nee":
     
     else:
         print("Je hebt iets verkeerds ingevoerd.")
-    
     
 elif confirmOptie == "nee":
     print("Je doet verder niets en je wordt je huis uit gestuurd.")
