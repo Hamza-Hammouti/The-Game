@@ -1,3 +1,26 @@
+print("We beginnen met je eigenschappen.")
+print("")
+naamChar = input ("Wat is je voornaam en je achternaam?: ")
+
+print("Dan hebben we ook je gewenste lengte nodig.")
+print("")
+print("Je lengte in cm:")
+lengteChar = int(input(""))
+
+print("")
+
+print("Je naam is " + naamChar)
+print("Je bent " + str(lengteChar) + " in cm")
+
+print("")
+
+if lengteChar < 170:
+    print("Je bent best kort, misschien komt dit wel van pas..")
+elif lengteChar > 169:
+    print("Je bent best lang, misschien komt dit wel van pas..")
+
+print("")
+
 print("Het is maandag, je loopt naar de bakker voor een broodje en je komt binnen.")
 print("Je ziet dat dat bakker leeg is en je komt al snel aan de beurt.")
 print("")
@@ -11,7 +34,7 @@ print("")
 
 if broodjeOptie == "1":
     print("Een broodje kip zal dan €3,50 zijn.")
-elif broodjeOptie == "2":
+elif broodjeOptie != "1":
     print("Een frikandelbroodje zal je dan €2,50 kosten.")
 
 print("Wil je pinnen of contant betalen?")
@@ -42,7 +65,7 @@ confirmOptie = input("Wil je dit zeker weten doen? (ja of nee): ").lower()
 
 print("")
 
-if confirmOptie == "ja":
+if not confirmOptie == "nee":
     print("Je komt thuis en je gaat nadenken over jouw doelwit.")
     print("Je hebt 2 keuzes:")
     print("1) Een winkel")
@@ -60,17 +83,131 @@ if confirmOptie == "ja":
     print("1) Een pistool")
     print("2) Een AK-47 rifle")
     print("3) Een AR-15 rifle")
-    wapenOptie = input("Keuze: ")
+    wapenOptie = int(input("Keuze: "))
 
     print("")
 
-    if wapenOptie == "1":
+    if wapenOptie < 2:
         print("Je kiest voor een pistool")
         
-    elif wapenOptie == "2" or wapenOptie == "3":
+    elif wapenOptie == 2 or wapenOptie == 3:
         print("Je kiest voor een rifle")
 
+    if targetOptie == "1":
+        print("Je loopt naar de Gucci winkel met een gespannen gevoel..")
+        print("Je komt steeds dichterbij en je staat op veilige kijkafstand van de winkel.")
+        print("")
+        print("Zet je een masker op of niet? (ja of nee)")
+        print("")
+        maskerOptie = input("Keuze: ").lower()
+    
+    elif targetOptie == "2":
+        print("Je loopt richting de dichtsbijzijnde bank met een gespannen gevoel..")
+        print("Je komt steeds dichterbij en je staat op veilige kijkafstand van de bank.")
+        print("")
+        print("Zet je een masker op of niet? (ja of nee)")
+        print("")
+        maskerOptie = input("Keuze: ").lower()
 
+    if wapenOptie <= 1 and maskerOptie == "ja":
+        print("Je zet je masker op en je haalt je pistool tevoorschijn.")
+    
+    elif wapenOptie >= 2 and maskerOptie == "ja":
+        print("Je zet je masker op en je haalt je rifle tevoorschijn.")
+
+    elif wapenOptie == 1 and maskerOptie == "nee":
+        print("Je zet je masker niet op want je denkt dat dit niet nodig is.")
+        print("Je haalt je pistool tevoosrschijn.")
+
+    elif wapenOptie >= 2 and maskerOptie == "nee":
+        print("Je zet je masker niet op want je denkt dat dit niet nodig is.")
+        print("Je haalt je rifle tevoorschijn.")
+    
+    if targetOptie == "1" and wapenOptie == 1 and maskerOptie == "ja":
+        print("Je rent de winkel in en je richt je pistool.")   
+        print("Je zet de camera's niet uit aangezien je een masker op hebt.")
+
+    elif targetOptie == "1" and wapenOptie >= 2 and maskerOptie == "ja":
+        print("Je rent de winkel in en je richt je rifle.")
+        print("Je vertelt de medewerker om niets geks te proberen.")
+        print("Je zet de camera's niet uit aangezien je een masker op hebt.")
+
+    if targetOptie == "2" and wapenOptie == 1 and maskerOptie == "ja":
+        print("Je rent de bank in en je richt je pistool op de bankmedewerker")
+        print("Hij zit achter kogelvrij glas")
+        print("Je vertelt de bankmedewerker om de deur open te doen")
+        print("Hij toont geen gehoor en je schiet op het glas")
+        print("Doordat je maar een pistool hebt richt het bijna geen schade aan")
+        print("De bankmedewerker drukt op de noodknop en je beslist om te gaan vluchten")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("Je wordt uiteindelijk niet gepakt maar je faalt en je komt de komen op straat.")
+        print("Je komt te onderkoelen op straat doordat je je huis bent uitgestuurd. Je overlijdt.")
+        print("")
+        print("GAME OVER")
+    
+    elif targetOptie == "2" and wapenOptie == 1 and maskerOptie == "nee":
+        print("Je rent de bank in en je richt je pistool op de bankmedewerker")
+        print("Hij zit achter kogelvrij glas")
+        print("Je vertelt de bankmedewerker om de deur open te doen")
+        print("Hij toont geen gehoor en je schiet op het glas")
+        print("Doordat je maar een pistool hebt richt het bijna geen schade aan")
+        print("De bankmedewerker drukt op de noodknop en je beslist om te gaan vluchten")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("De politie doet een inval op je huis en je wordt opgepakt")
+        print("Je krijgt levenslang door de ernst van de zaak")
+        print("")
+        print("GAME OVER")
+
+    elif targetOptie == "2" and wapenOptie >= 2 and maskerOptie == "ja":
+        print("Je rent de bank in en je richt je rifle op de bankmedewerker")
+        print("Hij zit achter kogelvrij glas")
+        print("Je vertelt de bankmedewerker om de deur open te doen")
+        print("Hij toont geen gehoor en je schiet op het glas")
+        print("Door de rifle die je hebt komt er een barst in het glas en schrikt de bankmedewerker")
+        print("Hij opent de deur zonder op de noodknop te drukken")
+        print("Je loopt naar de kluis en je vertelt de medewerker om de deur open te doen")
+        print("De bankmedewerker doet wat je zegt omdat hij je rifle ziet.")
+        print("De kluis gaat open en je ziet een kluis vol met biljetten.")
+        print("Je pakt wat je kan pakken en je vlucht, voordat de politie aankomt ben je al thuis.")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("Je hebt gewonnen, je hebt in totaal 100 miljoen euro gestolen en je bent verhuist naar je droomland.")
+        print("Hier leef je nog een lang en gelukkig leven.")
+
+    elif targetOptie == "2" and wapenOptie >= 2 and maskerOptie == "nee":
+        print("Je rent de bank in en je richt je rifle op de bankmedewerker")
+        print("Hij zit achter kogelvrij glas")
+        print("Je vertelt de bankmedewerker om de deur open te doen")
+        print("Hij toont geen gehoor en je schiet op het glas")
+        print("Door de rifle die je hebt komt er een barst in het glas en schrikt de bankmedewerker")
+        print("Hij opent de deur zonder op de noodknop te drukken")
+        print("Je loopt naar de kluis en je vertelt de medewerker om de deur open te doen")
+        print("De bankmedewerker doet wat je zegt omdat hij je rifle ziet.")
+        print("De kluis gaat open en je ziet een kluis vol met biljetten.")
+        print("Je pakt wat je kan pakken en je vlucht, voordat de politie aankomt ben je al thuis.")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("Doordat je je masker niet hebt op gedaan wordt er binnen 20 minuten een inval gedaan op je huis.")
+        print("Je wordt meegenomen en je krijgt uiteindelijk levenslang door de ernst van de zaak.")
+        print("")
+        print("GAME OVER")
+
+    elif targetOptie == "1" and wapenOptie == 1 and maskerOptie == "nee":
+        print("Je rent de winkel in en je richt je pistool.")
+        print("Je vertelt de medewerker om niets geks te proberen.")
+        print("Je ziet dat er camera's zijn in de winkel dus je probeert die kapot te maken.")
+        print("Je gaat op de toonbank staan maar terwijl je dit doet wordt je van achter aangevallen")
+        print("Je verliest je bewustzijn..")
+        print("")
+        print("GAME OVER")
+    
+    elif targetOptie == "1" and wapenOptie >= 2 and maskerOptie == "nee":
+        print("Je rent de winkel in en je richt je pistool.")
+        print("Je vertelt de medewerker om niets geks te proberen.")
+        print("Je ziet dat er camera's zijn in de winkel dus je probeert die kapot te maken.")
+        print("Je gaat op de toonbank staan maar terwijl je dit doet wordt je van achter aangevallen")
+        print("Je verliest je bewustzijn..")
+        print("")
+        print("GAME OVER")
+    
 elif confirmOptie == "nee":
     print("Je doet verder niets en je wordt je huis uit gestuurd.")
     print("Je komt op straat en je zinkt steeds dieper door.")
