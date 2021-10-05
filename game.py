@@ -145,7 +145,7 @@ if not confirmOptie == "nee":
         print("Je zet je masker niet op want je denkt dat dit niet nodig is.")
         print("Je haalt je rifle tevoorschijn.")
     
-    elif targetOptie == "1" and wapenOptie == 1 and maskerOptie == "ja":
+    if targetOptie == "1" and wapenOptie == 1 and maskerOptie == "ja":
         print("Je rent de winkel in en je richt je pistool.")   
         print("Je zet de camera's niet uit aangezien je een masker op hebt.")
 
